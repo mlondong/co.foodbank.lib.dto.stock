@@ -7,10 +7,16 @@ import javax.validation.constraints.Pattern;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import co.com.foodbank.contribution.dto.ContributionPK;
 import co.com.foodbank.product.dto.ProductPK;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author mauricio.londono@gmail.com co.com.foodbank.stock.dto 22/06/2021
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class StockDTO {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
@@ -26,50 +32,6 @@ public class StockDTO {
 
     @Valid
     private ProductPK product;
-
-
-
-    /**
-     * Default constructor.
-     */
-    public StockDTO() {}
-
-
-    public ContributionPK getContribution() {
-        return contribution;
-    }
-
-    public void setContribution(ContributionPK contribution) {
-        this.contribution = contribution;
-    }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
-
-
-    public ProductPK getProduct() {
-        return product;
-    }
-
-
-    public void setProduct(ProductPK product) {
-        this.product = product;
-    }
-
-
-    public Date getDateStock() {
-        return dateStock;
-    }
-
-
-    public void setDateStock(Date dateStock) {
-        this.dateStock = dateStock;
-    }
 
 
 
